@@ -1,0 +1,314 @@
+author,comment
+WRESTLING STAR-WWE,Dil se shukriya Harry sir ..love u 3000
+Asad Atta,Alhamdullillah! Started My Python Journey from this 12 Hours Course... Thank you Dear Sir Harry
+Punit Kangra,"2:17:16  1.Write a Python program to display a user entered name followed by Good Afternoon using input() function.
+sol: greeting = ""Good Afternoon""
+
+name = input(""Enter a name"")"
+Mohd asif Khan,"5:05:20
+Weather length of characters is less than 10 characters or not
+
+# code starts here "
+CyberLife,"5:51:36
+Here is the solution:
+num = int(input(""Enter the number: ""))
+
+count = 1"
+Anil Kumar,"05:51:30 (Loops problem number 3, print multiplication table using while loop)
+
+a = int(input(""Enter your number ""))
+
+i = 0"
+Sayyed Abid,Guys' let's not forget he is IITians and he can earn in lakhs by utilizing his time but still he takes out some time to teach people like us in free of cost and also making notes for us which is also free . 'Hats off to you man' and mad respect to you
+30 ARBAZ,"1:37:41
+Square of a number :
+
+n = int(input(""Enter the number: "")) "
+Dadhichi Chatterjee,1.37.05 I always stayed away from any coding classes because of their complexity but your way of teaching is just great.
+Muhammad Yousuf Soharwardi,"5:05:09 name-input('Enter ur name')
+if len(name)<10:
+     print('Less than 10 characters')
+else:"
+Virendra Verma,"5:05:25
+Q 4
+name = input(""Enter your name\n"")
+if(len(name)<10):"
+Unique Tech Tutorials,"1:37:45 Answer of Chapter 2 Practice set is
+a = input(""Enter a number"")
+a = int(a)
+square = a * a"
+Rocker Techs,The guy is working hard everyday to make learning easy for us. I have never seen such a great guy  in my life . You Deserve Millions of Subs 
+sippy sah,"Hello sir, your way of teaching is just amazing  today I completed this full python tutorial and I loved it literally.. thankyou so much.. if possible please make a video on cloud computing and AWS ..it would be really helpful once again thank you sir ... You are an excellent teacher."
+Prachi Tripathi,"Hi Harry, I am at chapter 8: Functions. I always procrastinated  learning Python due to the fear of not being able to make it but I come back to your tutorial with great interest. I have been able to solve all practice set till now. I am very thankful to you!"
+Aarya Barhate,"4:33:58 Greater!
+Thank you sir for making python possible for millions like us!"
+Annihilator,4:07:13 The answer is yes according to me. I think we can print both the values because they aren't the same. One is String and the other is Integer. So they are both unique.
+Gautam Kumar Adarshi,"Chapter 8 prblm 6 
+inches = int(input(""enter length""))
+Sol= inches*2.54
+Print(""length is"", Sol, ""cm"")"
+Jayant Balyan,"Yo have got innately inherited teaching skills Harry !!! Amazingly happy to see your Content Management, delivery and the way you connect with the audience so subtly and naturally, by sheer virtue of your refined tutorial skills. Impressed and 
+Hats Off !!!!"
+Fareed Hussain,"05:52:30
+Multiplication table using while loop
+num=int(input(""Enter number: ""))
+i=1"
+Shamouel Ansari,"9:04:18 Honestly speaking, this is the perfect course for absolute biggner like me im glad that u uploaded a content like this for us thanks"
+Aditya Jha,"6:07:11
+Chapter 7 practice set, question 10
+
+n = int ( input ( “Enter the number: "" ))"
+YasirHussain,"May Allah bless you Bro, You are doing so much hard work and teaching high quality content for free
+Thanks for Your Efforts, Contribution and Teaching ️️️"
+Twinis Giggles,"Condition expression practice set 
+Q7-
+Ch = input (“Enter your name:\n”)
+If ( ch >= “A” and ch<= “Z”):"
+Mritunjay Lamba,"4:47:16
+It is not mandatory to use else statement but we should use this for taking output if the statement is fails otherwise we don't get any output if the condition is false."
+Saurabh Kumar,"6:07:12
+
+num = int(input(""Enter a number: ""))"
+anshu sharma,"I was trying to learn python since long ago, but always lost my interest in python after one video.. now i got the best video for the beginners like me.. your practice set is really very helpful.. I have completed two chapters and my interest is still in learning python. That's amazing.. Thank you so much Harry for teaching us in a simple way.."
+Aditya Raj,"1:37:44
+
+# 1st Method
+
+a = input(""Enter first number: "")"
+Hrushabh Patil,"Hello sir, your way of teaching is just amazing  today I completed this full python tutorial and I loved it literally.. thankyou so much.. if possible please make a video on cloud computing and AWS ..it would be really helpful once again thank you sir ... You are an excellent teacher."
+Apoorv Nigam,"05:05:10 
+name = input(""Enter your name\t"")
+
+
+
+if(len(name) > 10):"
+Prachi Mhetre,The simplest and effective python course...loved it. 9:04:31
+Pooran Singh bangari,"1:37:40 
+a = input(""enter number: "")
+a = int(a)
+S"
+079_Bahniman Ghosh,"Completed Chapter 5 with Practice problems(4:19:27). Till now My experience with this Course is PYTHON have amazed me with its features which are different from C, C++; here we can do many algorithms so easily by using functions and don't need to think about memory management! Thank you So much Harry Sir for providing such a good course absolutely free!"
+Arpan Karmakar,"1:37:41 The code ---
+a = input(""Enter a number to be squared: "")
+
+a = int(a)
+
+b = a*a"
+ROXANNE Gaming YT,"Practice set 2- que. 5 
+a = Input(""enter a number :"") 
+a = int(a) "
+Saddam Husain saifi,"5:13:00 Q7 of practice set
+text=input(""enter the text: "")
+
+saddam= str()
+
+if (saddam in text):"
+priyansh srivastav,"I loved the q4 of practice set of ch 2 
+And I solved it easily 
+Thanks for your explanation sir"
+PSI 99 Gaming YT,"5:05:24
+name = input(""Enter your name : "")
+
+if len(name)<10:"
+EX evil,"5:05:28 
+Made it till Here  loving the  course And dedication you put towards it and way you teach  
+would love to donate whatever I can upon landing a Job "
+angel angel,"33.06
+It was my first program in python thank you sir for teaching️"
+Kapil Sharma,"You are a gem Harry, People like me with no technical background have learnt python. It demonstrates you as a trainer and the ease that you bring in technology, Thanks a ton brother!!!. God bless you with much success ahead!!!"
+GO FLEX RECORDS,"You are a legend brother , god bless u always  Tommorrow is my exam and still i completed your full session in a day and learn the whole py. , Thank you man ️"
+XISCB-42 VANSH KASHYAP,"3:19:00
+Q. Write a program to count the number of zeros in the following tuple: a = (7,0,8,0,0,9)
+a = (7,0,8,0,0,9)
+
+print(a.count(0))"
+Aman Shaikh,Today is my first day of learning Python language I'm from non IT.. Thank you harry sir for explaining this in simple language..
+Surya Prakash,"For Q1 of practice set of chapter 6:
+
+n1 = int(input(""Enter First Number:\n""))
+
+n2 = int(input(""Enter Second Number:\n""))"
+Punit Kangra,"timestamp 1:37:31 
+# Write a python program to calculate square of a no. entered by the user.
+
+a = input(""Enter your  no."")
+
+a = int(a)"
+Krishnan Kundan,"The only who is providing education free of cost in this costly world.
+Really Appreciative work.
+Just Imagine How Much Time He Would Have Invested just for us , writing handwritten notes is not a easy job."
+Zain ul abdeen,I finish this Course in 2 days..This man is the Legend  ..Now I can say that i am a programmer ...and now i am going to watch python advance tutorial ...Thanks Again Harry Sir for this and also for  many other couses
+MEHUL VERMA,"6:48:00
+
+def cm(inch):
+
+    return float(inch) * 2.54"
+ram mudgal,"6:52:00
+n = int(input(""Enter the number: ""))
+
+def multi(n):
+
+       return  (f""{n}x{i} = {n*i}"") "
+Waleed Ijaz,"5:51:25
+Chapter 7 Problem 3( Practise set)
+num=int(input('Enter the number :\n'))
+
+i=0"
+KC,"6:07:13 
+Chapter 7 , reversed for loop:
+For i in reversed(range(0,11):
+    Print(""n""*i)"
+Anay Gaming007,"3:19:36 
+Solution
+a = (7, 0, 8, 0, 0, 9)
+print(a.count(0))"
+Fatimah Timalia,"3:19:11 
+a= (7, 0, 8, 0, 0, 9)
+Print(a.count(0))
+The output will be: 3"
+AGreen Goblin,"Chapter 2: 1:37:54
+a = int(input(""Enter a Number To Square it: ""))
+b = a*a
+print(b)"
+Bhaskar Solanki,"a = input('Enter the word \n' )
+if (len(a)==10):
+ print ('charactors are 10')
+else:"
+Dipti Nikam,"6:52:10
+Multipliction table using python function
+Problem set 8. Q8
+def multi(num):"
+Arshad Qamar,"5:05:20
+
+username = input(""Enter your name: "")
+
+if len(username) > 10:"
+Avanish S Velidi,"►TimeStamps:
+
+Course Logistics: 00:00:00
+
+Chapter 0 - Introduction: 00:08:58
+
+Chapter 1 - Modules, Comments & Pip: 00:14:17"
+Shubham Umrao,"5:5:00
+
+Chapter 6 problem 4"
+Sopan Jadhav,"7:03:25
+I made a game for a first time in my life and this feeling is too good, I can't explain by words, I'm too happy , thank you harry sir for this wonderful tutorial thank you"
+gaurav thaker,"Hello Harry,  I was learned a PHP to see your videos and now i learned python with you. your all concepts are very easy to understand thank you bro.....and keep it up!"
+VIGHNESHA V,Please Note:  Classes & Objects : Two underscores for init and a space between def and _init_
+Vansh Patel,"4:07:15
+Twice value are different
+Because one is str and second is int"
+SOURAV MAITY,"1:37:17 
+a = int(input (""Enter a number  you will find the square :  "" ))
+square = a*a
+print (""Square of  "",a,"" is = "" , square)"
+EDUCATIONAL HUB,"3:19:13
+we use the count method of tuple for this problem 
+a = (7,0,8,0,0,9)
+print(a.count(0))"
+Mohan Kumar,"This guy is a real legend, who is helping youngsters and professionals who are looking to build their career.. Hands Off Brother --> Take a Bow.."
+AGreen Goblin,"Chapter 8: 6:52:10
+def multi():
+
+    num = int(input(""Enter A Number For It's Multiplication Table: ""))
+
+    for t in range(1,11):"
+V. S Technical,"Time stamp:- 6:07:23
+
+Answer of practice set question 10"
+A_145_Darshan Vora,"9:14:59  Line number 1 is been printed by Constructor 
+And Lines 2,3,4 is been Printed by method  getDetails"
+Raj Narayan Chowdhury,"5:05:25
+
+
+
+For chapter 6, problem 4"
+Sunil Kumar Classes,"5:51:33
+import time
+
+Number = int(input(""Enter your number: ""))"
+Nirbhay Rohatgi,I can't imagine how much pain and hard work he has to done to help us all really appreciate people like him who help other without any self interest .
+Aishwarya Adkar,You are simply amazing harry. The explanations are very clear and I am very happy to find this tutorial on Youtube for free!! Thanks for this help. Will recommend this course to as many of my friends I can.
+Varun Gupta,"9:43, Seats cancelling implemented succesfully. Thanks Harry."
+acesSPRAYyy,"5:51:27
+number  = int(input(""Enter the number: ""))
+i = 0 
+while i<=10:"
+Vaishnav Yadav,Guys' let's not forget he is an IITians and he can earn lakhs by utilizing his time but still he takes out some time to teach people like us free of cost and also makes notes for us which is also free. 'Hats off to you man' and mad respect to you
+Ayva Gaming,"5:05:28  text=input(""enter your text"")
+if(len(text)>10):
+ print(text,""more than 10 or 10 letters"")"
+zessu,"1:36:37 yaha par int(input(""enter a no. :"")) bhi kar sakte the ^_^"
+Mohit Aswani,Harry you are a hero for all youth. Your work can't be compared to any other. Take a bow bhai. 
+Piyush,"Chapter 0 - Introduction: 00:08:58
+
+Chapter 1 - Modules, Comments & Pip: 00:14:17
+
+Chapter 1 - Practice Set: 00:33:10
+
+Chapter 2 - Variables & Data Types: 00:44:35"
+Tilak Prj,Congratulations  to me for writing my first Python program and Thanks to you Harry for making such helpful Video. Just completed Chapter 1. Looking forward to learn more of Python.
+Rakibul Islam,"6:07:14
+I've created Reverse Multiplication table by this method:
+
+num = int(input(""Enter a Number: ""))"
+Shivam Patel,"1:37:41
+
+l = int(input(“Enter the value of length”))
+area = l*l"
+Purnima Mca,"Dear Harry, In Chapter 3 practice test Question 3, we need to find double spaces in a string. but find function shows index no of only 1st double space. what if we have added more than one double spaces in a string? Kindly guide."
+Rohit Bhardwaj,"5:51:57
+num = int(input(""Put the number required by you""))
+
+a = 0
+
+while a in range (11):"
+141_Saurabh Joshi,This guy is taking more effort to make the students and professionals to understand new languages...Hats off to you Harry..You are truly a gem...
+Muhammad Shayan,"a = input(""Enter first number : "")
+
+a = int(a)
+
+b = input(""Enter second number : "")
+
+b = int(b)"
+Kaustubh Tripathi,"5:51:23
+i = 1
+num=int(input(""Please enter the number""))
+while i>=10:"
+RAVI VERMA,"a=int(input(""enter the number ""))
+
+i=1
+
+while i<=10:
+
+    print(str(a) + ""*"" + str(i) + ""="" + str(a*i))"
+Priyansh Gupta,"6:51:56 
+# Multiplication using function
+
+# Multiplication using function"
+aish ayush 9B 03 kn,"9:04:32
+This is an inexplicable experience of mine , and I do think it must be  the same for all . Lots of appreciation to Harry bhaiya"
+Sudarshan Gapat,I was revising python concepts after months and you made it so simple yet understandable !!! Thank you so much Harry Bhai
+MD Arsh,"06:52:13
+Q8-Ans"
+codecamp,"1:37:17
+square root of a number
+def square(a):
+    sq = a*a"
+SHUBHAM SINGH,"Code for square of a number
+a=input(""Enter a number : "")
+
+a=int(a)
+
+sqr=a*a"
+JOY PRAKASH DHAR,"for lf-elif-else: question 4, we can use len() function to find the number of characters"
+Drecreastic,"6:51:56 Num =  int(input('Enter the number '))
+
+for i in range (1,11) :
+
+        print ((Num) , str('X') , (i) , ('=') ,(Num * i))"
+Prayas Art,People used to take thousands for such course and this guy is giving for free. Thanks Code with Harry 
+Chetan Ahire,"This is really amazing course Harry bhai, No need of timestamps the whole course is informative.
+️️️️"

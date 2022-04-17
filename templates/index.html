@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style>
+    .flex-container {
+      display: flex;
+      background-color: #f1f1f1;
+      align-items: center;
+    }
+
+    .myclass {
+      /* padding: 13px 150px; */
+      padding: 0px 15px;
+      margin: 0px 38px;
+    }
+
+    .flex-container>div {
+      background-color: #f1f1f1;
+      margin: 10px;
+      padding: 20px;
+    }
+
+    table {
+      border: black 2px solid !important;
+      display: block;
+      height: 300px;
+      overflow-y: scroll;
+    }
+
+    thead {
+      position: sticky;
+      top: 0;
+      border: black 1px solid !important;
+      background-color: #F1F1F1;
+    }
+
+    /* .navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: none;
+    } */
+    .navbar {
+      padding: 9px 118px;
+      justify-content: space-between;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  </style>
+  <title>Youtube Comment Analyzer</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar-brand">
+      <!-- <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+      <h1> Youtube Comment Analyser </h1>
+    </div>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="deepanalyser">Already Trained</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <div class="container">
+    <form method="post">
+      {% csrf_token %}
+      <div class="flex-container m-4">
+        <div>
+          <h3>Enter Youtube Link</h3>
+        </div>
+        <div><input type="text" name="youtube-video-link" class="form-control" id="youtubelink"
+            placeholder="Youtube Video Link" style="width: 300px;"></div>
+        <div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="choice" value="choice1" id="flexRadioDefault1" checked>
+            <label class="form-check-label" for="flexRadioDefault1">
+              Normal Analysis
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="choice" value="choice2" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">
+              Deep Analysis
+            </label>
+          </div>
+    </form>
+
+  </div>
+  <a href="/index">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </a>
+  </div>
+  </div>
+
+
+  <div class="flex-container myclass">
+    <div class="details">
+      <p>
+        Title : {{title}} <br>
+        Views : {{viewcount}} <br>
+        Likes : {{likecount}} <br>
+        Comments : {{commentcount}}
+      </p>
+    </div>
+    <!-- <h6>You have Entered {{data}}</h6> -->
+    <div class="video">
+      <iframe width="620" height="250" src="https://www.youtube.com/embed/{{data}}">
+      </iframe>
+    </div>
+  </div>
+
+
+
+  <div class="container-fluid" style="padding: 0 50px 0 50px;">
+    <hr>
+    <center>
+      <br>
+      <h2>List of Comments (Raw)</h2>
+    </center>
+    <br>
+    <table class="table table-bordered" id="pretable">
+      <thead>
+        <tr>
+          <th scope="col" class="w-5" style="width: 60px;">SrNo.</th>
+          <th scope="col" class="w-5">Author</th>
+          <th scope="col" class="w-5">Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for aut in all %}
+        <tr>
+          <th scope="row" class="w-5" style="width: 60px;">{{forloop.counter}}</th>
+          {% for a in aut %}
+          <td class="w-5">{{a}}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <hr>
+  </div>
+  <br>
+  <center>
+    <form method="post">
+      {% csrf_token %}
+      <!-- <a href="/index#pretable"> -->
+      <!-- <button type="submit" name="preprocess_data" value="preprocess_data" class="btn btn-primary"> -->
+      <h2>
+        Pre Process Comment for Analysis
+      </h2>
+      <!-- </button> -->
+      <!-- </a> -->
+
+    </form>
+  </center>
+  <br>
+  <div class="container-fluid" style="padding: 0 50px 0 50px;">
+
+    <h2>List of Comments (Pre Processed)</h2>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col" class="w-5" style="width: 60px;">SrNo.</th>
+          <th scope="col" class="w-5">Author</th>
+          <th scope="col" class="w-5">Comment</th>
+          <th scope="col" class="w-5">Sentiment_type</th>
+          <th scope="col" class="w-5">Polarity</th>
+          <th scope="col" class="w-5">Subjectivity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for aut1 in all1 %}
+        <tr>
+          <th scope="row" class="w-5" style="width: 60px;">{{forloop.counter}}</th>
+          {% for a1 in aut1 %}
+          <td class="w-5">{{a1}}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <hr>
+  </div>
+
+  <div class="container">
+    <br>
+    <div class="row">
+      <div class="col">
+          <center>
+            <h2>Positive Comments</h2>
+            </center>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <!-- <th scope="col" class="w-5" style="width: 60px;">SrNo.</th> -->
+                <th scope="col" class="w-5">Comment</th>
+                <th scope="col" class="w-5">Sentiment_type</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for pos2 in poslist %}
+              <tr>
+                <!-- <th scope="row" class="w-5" style="width: 60px;">{{forloop.counter}}</th> -->
+                {% for p2 in pos2 %}
+                <td class="w-5">{{p2}}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      </div>
+      <div class="col">
+        <center>
+
+          <h2>Negative Comments</h2>
+        </center>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <!-- <th scope="col" class="w-5" style="width: 60px;">SrNo.</th> -->
+                <th scope="col" class="w-5">Comment</th>
+                <th scope="col" class="w-5">Sentiment_type</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for neg2 in neglist %}
+              <tr>
+                <!-- <th scope="row" class="w-5" style="width: 60px;">{{forloop.counter}}</th> -->
+                {% for n2 in neg2 %}
+                <td class="w-5">{{n2}}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="padding: 0 50px 0 50px;">
+
+  </div>
+
+  <br>
+  <center>
+
+      <h2>Result</h2>
+
+    <br>
+    {{result_text}}
+    <br>
+    <img src="../static/output/graph.png" alt="Graph not Generated">
+  </center>
+  <center>
+    <br>
+    <h2>WordCloud</h2>
+    <br>
+    <img src="../static/output/wordcloud.png" alt="WordCloud not Generated">
+  </center>
+  <center>
+    <br>
+    <h2>Histogram</h2>
+    <br>
+    <img src="../static/output/histogram.png" alt="histogram not Generated">
+  </center>
+  <center>
+    <br>
+    <h2>Scattered Plot</h2>
+    <br>
+    <img src="../static/output/scatteredplot.png" alt="histogram not Generated">
+  </center>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

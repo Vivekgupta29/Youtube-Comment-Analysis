@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style>
+    .flex-container {
+      display: flex;
+      background-color: #f1f1f1;
+      align-items: center;
+    }
+
+    .myclass {
+      /* padding: 13px 150px; */
+      padding: 0px 15px;
+      margin: 0px 38px;
+    }
+
+    .flex-container>div {
+      background-color: #f1f1f1;
+      margin: 10px;
+      padding: 20px;
+    }
+
+    table {
+      border: black 2px solid !important;
+      display: block;
+      height: 300px;
+      overflow-y: scroll;
+    }
+
+    thead {
+      position: sticky;
+      top: 0;
+      border: black 1px solid !important;
+      background-color: #F1F1F1;
+    }
+
+    /* .navbar-expand-lg {
+      flex-wrap: nowrap;
+      justify-content: none;
+      } */
+    .navbar {
+      padding: 9px 118px;
+      justify-content: space-between;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    iframe {
+      border: 12px solid #0B5ED7;
+    }
+    img{
+      width: 100%;
+    }
+  </style>
+  <title>Already Trained</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar-brand">
+      <!-- <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+      <h1> Youtube Comment Analyser </h1>
+    </div>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/YCAML/index">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/YCAML/deepanalyser">Already Trained</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container-fluid" style="padding: 0 50px 0 50px;">
+    <div class="row">
+
+
+      <div class="col">
+        <center>
+          <h2>Apna College Python Video</h2>
+          <div class="details">
+
+            <iframe width="490" height="240" src="https://www.youtube.com/embed/{{data1}}"></iframe>
+
+            <p>
+              Title : {{title1}} <br>
+              Views : {{viewcount1}} <br>
+              Likes : {{likecount1}} <br>
+              Comments : {{commentcount1}}
+            </p>
+          </div>
+          <hr>
+      <h2>Result</h2>
+
+      <br>
+      {{result_text}}
+      <br>
+      <img src="../static/output/pythonvideo1/graph.png" alt="Graph1 not Generated">
+        </center>
+
+      </div>
+      <div class="col">
+        <center>
+
+          <h2>Code With Harry Python Video</h2>
+          <div class="details">
+
+            <iframe width="490" height="240" src="https://www.youtube.com/embed/{{data2}}"></iframe>
+
+            <p>
+              Title : {{title2}} <br>
+              Views : {{viewcount2}} <br>
+              Likes : {{likecount2}} <br>
+              Comments : {{commentcount2}}
+            </p>
+          </div>
+          <hr>
+      <h2>Result</h2>
+
+      <br>
+      {{result_text}}
+      <img src="../static/output/pythonvideo2/graph.png" alt="Graph2 not Generated">
+        </center>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
