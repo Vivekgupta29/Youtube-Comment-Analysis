@@ -78,13 +78,34 @@ from matplotlib.pyplot import figure
 #     nlist=[]
 #     df50=pd.read_csv("normaldatasets/final_output.csv")
 
-df=pd.read_csv('deepdatasets/deepfinal/deepoutput_apnacollege_pythonvideo.csv')
-# print(' '.join(title for title in df.comment))
-# temp=" ".join(title[data["stars"]]["text"].values) 
-text2 = " ".join(title for title in df.comment)
-print(text2)
+
+# df=pd.read_csv('deepdatasets/deepfinal/deepoutput_apnacollege_pythonvideo.csv')
+# text2=str(df.comment)
 # word_cloud2 = WordCloud(width=500,height=300,random_state=21,max_font_size=119,collocations = False, background_color = 'white').generate(text2)
 # plt.imshow(word_cloud2, interpolation='bilinear')
 # plt.axis("off")
 # plt.show()
 # plt.close()
+
+# df=pd.read_csv('deepdatasets/deepfinal/final_deepoutput_codewithharry_pythonvideo1.csv')
+# description_list = df['comment'].values.tolist()
+# # print(description_list)
+# word_frequency = Counter(" ".join(description_list).split()).most_common(10)
+# print(word_frequency)
+# words = [word for word, _ in word_frequency]
+# counts = [counts for _, counts in word_frequency]
+
+# # words=[text2]
+# # counts=[20,30,40,50,60]
+# plt.bar(words, counts)
+# plt.title("10 most frequent Words in Comments")
+# plt.ylabel("Frequency")
+# plt.xlabel("Words")
+# plt.show()
+# # plt.savefig(outpath+"histogram.png")
+# plt.close()
+
+
+pd.DataFrame.hist(column='comment')
+pd.DataFrame.plot(kind='hist')
+pd.DataFrame.plot.hist()

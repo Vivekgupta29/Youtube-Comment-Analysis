@@ -109,7 +109,7 @@ def scrape(url,filename1):
 
 def createWordCloud(df,outpath):
     try:
-        text2 = " ".join(title for title in df.comment)
+        text2=str(df.comment)
         word_cloud2 = WordCloud(width=500,height=300,random_state=21,max_font_size=119,collocations = False, background_color = 'white').generate(text2)
         plt.imshow(word_cloud2, interpolation='bilinear')
         plt.axis("off")
@@ -429,34 +429,84 @@ def deepanalyser(request):
     context['likecount2']=result_apnacollege[5]
     context['commentcount2']=result_apnacollege[6]
 
+
+###First Python Video
     file1="deepdatasets/deepoutput_codewithharry_pythonvideo1.csv"
     file2="deepdatasets/deepfinal/final_deepoutput_codewithharry_pythonvideo1.csv"
     df1=pd.read_csv(file1)
+
     filefrom=file1
     fileto=file2
-    createFinalCsv(df1,filefrom,fileto)
+
+    csvexits1=Path("deepdatasets/deepfinal/final_deepoutput_codewithharry_pythonvideo1.csv")
+    if csvexits1.exists():
+        pass
+    else:
+        createFinalCsv(df1,filefrom,fileto)
 
     df9=pd.read_csv(file2)
     outpath="static/output/pythonvideo1/"
-    createWordCloud(df9,outpath)
-    createHistogram(df9,outpath)
-    createScatteredPlot(df9,outpath)
-    result_text=createGraph(df9,outpath)
+
+    graphexist1 = Path("static/output/pythonvideo1/graph.png")
+    if graphexist1.exists():
+        pass
+    else:
+        result_text=createGraph(df9,outpath)
+    
+    wordexist1 = Path("static/output/pythonvideo1/wordcloud.png")
+    if wordexist1.exists():
+        pass
+    else:
+        createWordCloud(df9,outpath)
+        # createHistogram(df9,outpath)
+    
+    scatterexist1 = Path("static/output/pythonvideo1/scatteredplot.png")
+    if scatterexist1.exists():
+        pass
+    else:
+        createScatteredPlot(df9,outpath)
 
 
+
+
+
+####Second Python Video
     file3="deepdatasets/deepoutput_apnacollege_pythonvideo.csv"
     file4="deepdatasets/deepfinal/deepoutput_apnacollege_pythonvideo.csv"
 
     df5=pd.read_csv(file3)
     filefrom5=file3
     fileto5=file4
-    createFinalCsv(df5,filefrom5,fileto5)
+
+    csvexits2=Path("deepdatasets/deepfinal/deepoutput_apnacollege_pythonvideo.csv")
+    if csvexits2.exists():
+        pass
+    else:
+        createFinalCsv(df5,filefrom5,fileto5)
+
 
     df6=pd.read_csv(file4)
     outpath5="static/output/pythonvideo2/"
-    createWordCloud(df6,outpath5)
-    createHistogram(df6,outpath5)
-    createScatteredPlot(df6,outpath5)
-    result_text=createGraph(df6,outpath5)
-    # context['data']='After Datatable'
+    
+    # createHistogram(df6,outpath5)
+
+    graphexist2 = Path("static/output/pythonvideo2/graph.png")
+    if graphexist2.exists():
+        pass
+    else:
+        result_text=createGraph(df6,outpath5)
+    
+    wordexist2 = Path("static/output/pythonvideo2/wordcloud.png")
+    if wordexist2.exists():
+        pass
+    else:
+        createWordCloud(df6,outpath5)
+        # createHistogram(df6,outpath5)
+    
+    scatterexist2 = Path("static/output/pythonvideo2/scatteredplot.png")
+    if scatterexist2.exists():
+        pass
+    else:
+        createScatteredPlot(df6,outpath5)
+
     return render(request,"deepanalyser.html",context)
