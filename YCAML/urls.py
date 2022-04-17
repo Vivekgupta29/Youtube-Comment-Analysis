@@ -6,4 +6,5 @@ urlpatterns = [
     path('', views.index,name='YCAML'),
     path('index', views.index,name='YCAML'),
     path('deepanalyser', views.deepanalyser),
+    path('deepanalyser1', views.deepanalyser1),
 ]

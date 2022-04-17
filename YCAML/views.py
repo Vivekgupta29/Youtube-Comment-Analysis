@@ -102,6 +102,21 @@ def scrape(url,filename1):
         if new_height>90000 and new_height<93000:
             print("\nSaving For Sixth time\n")
             createdataset(filename1,username_elems,comment_elems)
+        if new_height>100000 and new_height<103000:
+            print("\nSaving For Seventh time\n")
+            createdataset(filename1,username_elems,comment_elems)
+        if new_height>110000 and new_height<113000:
+            print("\nSaving For eight time\n")
+            createdataset(filename1,username_elems,comment_elems)
+        if new_height>120000 and new_height<123000:
+            print("\nSaving For ninth time\n")
+            createdataset(filename1,username_elems,comment_elems)
+        if new_height>130000 and new_height<133000:
+            print("\nSaving For tenth time\n")
+            createdataset(filename1,username_elems,comment_elems)
+        if new_height>150000 and new_height<153000:
+            print("\nSaving For eleventh time\n")
+            createdataset(filename1,username_elems,comment_elems)
 
         last_height = new_height
 
@@ -259,11 +274,13 @@ def createFinalCsv(df10,filefrom,fileto):
     c=0
     for aut in all10:
         #for lower case
-        lower_case=aut[1].lower()
-        cleaned_text=lower_case.translate(str.maketrans('','',string.punctuation))
+        # print(aut[1])
+        # lower_case=aut[1]
+        # lower_case=aut[1].lower()
+        # cleaned_text=lower_case.translate(str.maketrans('','',string.punctuation))
         c=c+1
         #for removing Special Characters
-        new_list=re.sub('[^A-Za-z0-9\s]+', '', aut[1])
+        new_list=re.sub('[^A-Za-z0-9\s]+', '', str(aut[1]))
 
         #for tokenization
         tokenized_words=new_list.split()
@@ -400,7 +417,7 @@ def index(request):
         outpath="static/output/"
         createWordCloud(df9,outpath)
         #histogram
-        createHistogram(df9,outpath)
+        # createHistogram(df9,outpath)
         
         # Graph Maker
         result_text=createGraph(df9,outpath)
@@ -430,7 +447,7 @@ def deepanalyser(request):
     context['commentcount2']=result_apnacollege[6]
 
 
-###First Python Video
+    ###First Python Video
     file1="deepdatasets/deepoutput_codewithharry_pythonvideo1.csv"
     file2="deepdatasets/deepfinal/final_deepoutput_codewithharry_pythonvideo1.csv"
     df1=pd.read_csv(file1)
@@ -467,10 +484,7 @@ def deepanalyser(request):
         createScatteredPlot(df9,outpath)
 
 
-
-
-
-####Second Python Video
+    ####Second Python Video
     file3="deepdatasets/deepoutput_apnacollege_pythonvideo.csv"
     file4="deepdatasets/deepfinal/deepoutput_apnacollege_pythonvideo.csv"
 
@@ -510,3 +524,101 @@ def deepanalyser(request):
         createScatteredPlot(df6,outpath5)
 
     return render(request,"deepanalyser.html",context)
+
+
+def deepanalyser1(request):
+    result_codewithharry=createFirstcsv('https://www.youtube.com/watch?v=5zOHSysMmH0')
+    result_apnacollege=createFirstcsv('https://www.youtube.com/watch?v=DxREm3s1scA')
+    context['data1']=result_codewithharry[2]
+    context['title1']=result_codewithharry[3]
+    context['viewcount1']=result_codewithharry[4]
+    context['likecount1']=result_codewithharry[5]
+    context['commentcount1']=result_codewithharry[6]
+
+    context['data2']=result_apnacollege[2]
+    context['title2']=result_apnacollege[3]
+    context['viewcount2']=result_apnacollege[4]
+    context['likecount2']=result_apnacollege[5]
+    context['commentcount2']=result_apnacollege[6]
+
+
+    ###First podcast Video
+    file1="deepdatasets/deepoutput_podcast_mark.csv"
+    file2="deepdatasets/deepfinal/final_deepoutput_podcast_mark.csv"
+    df1=pd.read_csv(file1)
+
+    filefrom=file1
+    fileto=file2
+
+    csvexits1=Path(file2)
+    if csvexits1.exists():
+        pass
+    else:
+        createFinalCsv(df1,filefrom,fileto)
+
+    df9=pd.read_csv(file2)
+    outpath="static/output/podcast1/"
+
+    graphexist1 = Path(outpath+"graph.png")
+    if graphexist1.exists():
+        pass
+    else:
+        result_text=createGraph(df9,outpath)
+    
+    wordexist1 = Path(outpath+"wordcloud.png")
+    if wordexist1.exists():
+        pass
+    else:
+        createWordCloud(df9,outpath)
+        # createHistogram(df9,outpath)
+    
+    scatterexist1 = Path(outpath+"scatteredplot.png")
+    if scatterexist1.exists():
+        pass
+    else:
+        createScatteredPlot(df9,outpath)
+
+
+
+
+
+    ####Second podcast Video
+    file3="deepdatasets/deepoutput_podcast_elonmusk.csv"
+    file4="deepdatasets/deepfinal/final_deepoutput_podcast_elonmusk.csv"
+
+    df5=pd.read_csv(file3)
+    filefrom5=file3
+    fileto5=file4
+
+    csvexits2=Path(file4)
+    if csvexits2.exists():
+        pass
+    else:
+        createFinalCsv(df5,filefrom5,fileto5)
+
+
+    df6=pd.read_csv(file4)
+    outpath5="static/output/podcast2/"
+    
+    # createHistogram(df6,outpath5)
+
+    graphexist2 = Path(outpath5+"graph.png")
+    if graphexist2.exists():
+        pass
+    else:
+        result_text=createGraph(df6,outpath5)
+    
+    wordexist2 = Path(outpath5+"wordcloud.png")
+    if wordexist2.exists():
+        pass
+    else:
+        createWordCloud(df6,outpath5)
+        # createHistogram(df6,outpath5)
+    
+    scatterexist2 = Path(outpath5+"scatteredplot.png")
+    if scatterexist2.exists():
+        pass
+    else:
+        createScatteredPlot(df6,outpath5)
+
+    return render(request,"deepanalyser1.html",context)
