@@ -106,6 +106,18 @@ from matplotlib.pyplot import figure
 # plt.close()
 
 
-pd.DataFrame.hist(column='comment')
-pd.DataFrame.plot(kind='hist')
-pd.DataFrame.plot.hist()
+# pd.DataFrame.hist(column='comment')
+# pd.DataFrame.plot(kind='hist')
+# pd.DataFrame.plot.hist()
+
+df.plot(kind='hist',
+        alpha=0.7,
+        bins=30,
+        title='Histogram Of Test Scores',
+        rot=45,
+        grid=True,
+        figsize=(12,8),
+        fontsize=15, 
+        color=['#A0E8AF', '#FFCF56'])
+plt.xlabel('Test Score')
+plt.ylabel("Number Of Students")

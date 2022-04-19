@@ -525,7 +525,6 @@ def deepanalyser(request):
 
     return render(request,"deepanalyser.html",context)
 
-
 def deepanalyser1(request):
     result_codewithharry=createFirstcsv('https://www.youtube.com/watch?v=5zOHSysMmH0')
     result_apnacollege=createFirstcsv('https://www.youtube.com/watch?v=DxREm3s1scA')
@@ -622,3 +621,97 @@ def deepanalyser1(request):
         createScatteredPlot(df6,outpath5)
 
     return render(request,"deepanalyser1.html",context)
+
+def deepanalyser2(request):
+    result_codewithharry=createFirstcsv('https://www.youtube.com/watch?v=6ZfuNTqbHE8')
+    result_apnacollege=createFirstcsv('https://www.youtube.com/watch?v=TcMBFSGVi1c')
+    context['data1']=result_codewithharry[2]
+    context['title1']=result_codewithharry[3]
+    context['viewcount1']=result_codewithharry[4]
+    context['likecount1']=result_codewithharry[5]
+    context['commentcount1']=result_codewithharry[6]
+
+    context['data2']=result_apnacollege[2]
+    context['title2']=result_apnacollege[3]
+    context['viewcount2']=result_apnacollege[4]
+    context['likecount2']=result_apnacollege[5]
+    context['commentcount2']=result_apnacollege[6]
+
+
+    ###First movie Video
+    file1="deepdatasets/deepoutput_avengersinfinitywar.csv"
+    file2="deepdatasets/deepfinal/final_deepoutput_avengersinfinitywar.csv"
+    df1=pd.read_csv(file1)
+
+    filefrom=file1
+    fileto=file2
+
+    csvexits1=Path(file2)
+    if csvexits1.exists():
+        pass
+    else:
+        createFinalCsv(df1,filefrom,fileto)
+
+    df9=pd.read_csv(file2)
+    outpath="static/output/infinitywar/"
+
+    graphexist1 = Path(outpath+"graph.png")
+    if graphexist1.exists():
+        pass
+    else:
+        result_text=createGraph(df9,outpath)
+    
+    wordexist1 = Path(outpath+"wordcloud.png")
+    if wordexist1.exists():
+        pass
+    else:
+        createWordCloud(df9,outpath)
+        # createHistogram(df9,outpath)
+    
+    scatterexist1 = Path(outpath+"scatteredplot.png")
+    if scatterexist1.exists():
+        pass
+    else:
+        createScatteredPlot(df9,outpath)
+
+
+    ####Second movie Video
+    file3="deepdatasets/deepoutput_avengersendgame.csv"
+    file4="deepdatasets/deepfinal/final_deepoutput_avengersendgame.csv"
+
+    df5=pd.read_csv(file3)
+    filefrom5=file3
+    fileto5=file4
+
+    csvexits2=Path(file4)
+    if csvexits2.exists():
+        pass
+    else:
+        createFinalCsv(df5,filefrom5,fileto5)
+
+
+    df6=pd.read_csv(file4)
+    outpath5="static/output/endgame/"
+    
+    # createHistogram(df6,outpath5)
+
+    graphexist2 = Path(outpath5+"graph.png")
+    if graphexist2.exists():
+        pass
+    else:
+        result_text=createGraph(df6,outpath5)
+    
+    wordexist2 = Path(outpath5+"wordcloud.png")
+    if wordexist2.exists():
+        pass
+    else:
+        createWordCloud(df6,outpath5)
+        # createHistogram(df6,outpath5)
+    
+    scatterexist2 = Path(outpath5+"scatteredplot.png")
+    if scatterexist2.exists():
+        pass
+    else:
+        createScatteredPlot(df6,outpath5)
+
+    return render(request,"deepanalyser2.html",context)

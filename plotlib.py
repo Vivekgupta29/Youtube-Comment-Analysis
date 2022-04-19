@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 from collections import Counter
 from matplotlib.pyplot import figure
+import numpy as np
 
 
 def createWordCloud():
@@ -114,8 +115,42 @@ def createScatteredPlot():
     plt.savefig("static/output/scatteredplot.png")
     plt.close()
 
-createWordCloud()
-createHistogram()
+
+def createmultigraph():
+    file3="deepdatasets/deepfinal/final_deepoutput_avengersinfinitywar.csv"
+    file4="deepdatasets/deepfinal/final_deepoutput_avengersendgame.csv"
+    df3=pd.read_csv(file3)
+    df4=pd.read_csv(file4)
+
+    pola=[]
+    subj=[]
+    i=0
+    while i<(len(df3)):
+        df3 = list(df3.iloc[i])
+        i=i+1
+        pola.append(df3[3])
+        subj.append(df3[4])
+        df3=pd.read_csv(file3)
+    avg_pola = sum(pola) / len(pola)
+    avg_subj = sum(subj) / len(subj)
+
+    print(avg_pola)
+    print(avg_subj)
+    
+    x = np.arange(2)
+    y1 = [avg_pola]
+    y2 = [avg_subj]
+    width = 0.10
+
+    # plot data in grouped manner of bar type
+    plt.bar(x-1.0, y1, width)
+    plt.bar(x-1.0, y2, width)
+    plt.show()
+
+# createWordCloud()
+# createHistogram()
 # result_text=createGraph()
 # print(result_text)
 # createScatteredPlot()
+createmultigraph()
+
