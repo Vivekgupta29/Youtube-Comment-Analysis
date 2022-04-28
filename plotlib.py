@@ -153,4 +153,3 @@ def createmultigraph():
 # print(result_text)
 # createScatteredPlot()
 createmultigraph()
-

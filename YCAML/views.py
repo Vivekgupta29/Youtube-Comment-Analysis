@@ -121,6 +121,7 @@ def scrape(url,filename1):
         last_height = new_height
 
     driver.close()
+    return None
 
 def createWordCloud(df,outpath):
     try:
@@ -217,6 +218,28 @@ def getSubjectivity(text):
 
 def getPolarity(text):
     return TextBlob(text).sentiment.polarity
+
+def youtubeApi(data):
+    APIKEY = "AIzaSyAT-aO9o-kfKTSUWNO4u2Yg8f5hy7w5LJM"
+    youtubeLink = data
+    if(youtubeLink=="e" or youtubeLink=="exit"):
+        quit()
+    if youtubeLink.find("v="):
+        youtubeLink = youtubeLink.split("v=")[1].split("&")[0]
+        print(youtubeLink)
+    else:
+        youtubeLink = youtubeLink.split("/")[3]
+        print(youtubeLink)
+
+    v = requests.get(url="https://www.googleapis.com/youtube/v3/videos?id="+youtubeLink+"&part=snippet&part=statistics&key="+APIKEY).json()
+    response=v
+    title=response["items"][0]["snippet"]["title"]
+    viewcount=response["items"][0]["statistics"]["viewCount"]
+    likecount=response["items"][0]["statistics"]["likeCount"]
+    commentcount=response["items"][0]["statistics"]["commentCount"]
+    author1=[]
+    comment1=[]
+    return author1,comment1,youtubeLink,title,viewcount,likecount,commentcount
 
 def createFirstcsv(data):
     LINK=data
@@ -348,8 +371,16 @@ def index(request):
         
         if data and choice == 'choice2':
             link= data
-            filename1="deepdatasets/output_deep_from_bot.csv"
+            filename1="normaldatasets/output.csv"
             scrape(link,filename1)
+            
+            result=youtubeApi(data)
+
+            context['data']=result[2]
+            context['title']=result[3]
+            context['viewcount']=result[4]
+            context['likecount']=result[5]
+            context['commentcount']=result[6]
         else:
             print("Normal Analysis Selected")
         # if request.POST.get('preprocess_data') == 'preprocess_data':
