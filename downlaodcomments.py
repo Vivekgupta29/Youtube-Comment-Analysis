@@ -6,7 +6,7 @@ import csv
 import pandas as pd
 context={}
 def createFirstcsv():
-    APIKEY = "AIzaSyAT-aO9o-kfKTSUWNO4u2Yg8f5hy7w5LJM"
+    APIKEY = "YOURAPIKEY"
     limit = 100
     fileType = 'csv'
     order = 'relevance'
